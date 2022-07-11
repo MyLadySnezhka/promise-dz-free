@@ -1,0 +1,17 @@
+.wrapper {
+    width: 800px;
+    min-height: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #000;
+    display: flex;
+}
+
+.planets {
+    width: 40%;
+}
+
+.characters {
+    width: 60%;
+}
+
