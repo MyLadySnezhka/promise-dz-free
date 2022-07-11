@@ -16,4 +16,95 @@
 .characters {
   width: 60%;
 }
+
+.animation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 600px;
+  position: relative;
+}
+
+.animation .block1 {
+  width: 50px;
+  height: 50px;
+  -webkit-animation: move1 5s infinite;
+          animation: move1 5s infinite;
+  position: absolute;
+  border: 1px solid #000;
+  border-radius: 999px;
+}
+
+@-webkit-keyframes move1 {
+  0% {
+    left: 30px;
+    background: #068a2e;
+  }
+  50% {
+    left: 49%;
+    background: #068a2e;
+  }
+  100% {
+    left: 30px;
+    background: yellow;
+  }
+}
+
+@keyframes move1 {
+  0% {
+    left: 30px;
+    background: #068a2e;
+  }
+  50% {
+    left: 49%;
+    background: #068a2e;
+  }
+  100% {
+    left: 30px;
+    background: yellow;
+  }
+}
+
+.animation .block2 {
+  width: 50px;
+  height: 50px;
+  -webkit-animation: move2 5s infinite;
+          animation: move2 5s infinite;
+  position: absolute;
+  border: 1px solid #000;
+  border-radius: 999px;
+}
+
+@-webkit-keyframes move2 {
+  0% {
+    right: 30px;
+    background: yellow;
+  }
+  50% {
+    right: 49%;
+    background: yellow;
+  }
+  100% {
+    right: 30px;
+    background: #068a2e;
+  }
+}
+
+@keyframes move2 {
+  0% {
+    right: 30px;
+    background: yellow;
+  }
+  50% {
+    right: 49%;
+    background: yellow;
+  }
+  100% {
+    right: 30px;
+    background: #068a2e;
+  }
+}
 /*# sourceMappingURL=main.css.map */

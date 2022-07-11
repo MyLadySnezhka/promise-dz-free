@@ -31,6 +31,7 @@ planetsLnk.addEventListener('change', (ev) => {
     i = ev.target.value;
     //console.log(i);
     init(i);
+    console.log(i, opis);
     charLnk.innerHTML = opis;
 })
 
