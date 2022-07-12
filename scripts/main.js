@@ -1,5 +1,6 @@
 const planetsLnk = document.querySelector('select');
 const charLnk = document.querySelector('.characters');
+const animLnk = document.querySelector('.animation');
 
 let charPl;
 let name, diameter, climate, gravity, population, rotation_period, orbital_period, terrain, surface_water, created, edited, url;
@@ -28,9 +29,12 @@ const init = async (i) => {
 }
 
 const preloader = () => {
-    const elem = document.createElement('div');
-    elem.className = 'animation';
-    charLnk.appendChild(elem);
+    const elem1 = document.createElement('div');
+    elem1.className = 'block1';
+    animLnk.appendChild(elem1);
+    const elem2 = document.createElement('div');
+    elem2.className = 'block2';
+    animLnk.appendChild(elem2);
 }
 
 planetsLnk.addEventListener('change', async (ev) => {
@@ -41,7 +45,7 @@ planetsLnk.addEventListener('change', async (ev) => {
     }
     preloader();
     await init(i);
-    console.log(i, opis);
     charLnk.innerHTML = opis;
+    return;
 })
 
