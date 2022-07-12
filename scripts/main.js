@@ -17,9 +17,9 @@ const init = async (i) => {
         climate: ${charPl.climate}<br>
         gravity: ${charPl.gravity}<br>
         rotation_period: ${charPl.rotation_period}<br>
-        orbital_period: ${orbital_period}<br>
-        terrain: ${terrain}<br>
-        surface_water: ${surface_water}<br>
+        orbital_period: ${charPl.orbital_period}<br>
+        terrain: ${charPl.terrain}<br>
+        surface_water: ${charPl.surface_water}<br>
         population: ${charPl.population}<br>
         created: ${charPl.created}<br>
         edited: ${charPl.edited}<br>
@@ -27,10 +27,20 @@ const init = async (i) => {
   
 }
 
-planetsLnk.addEventListener('change', (ev) => {
+const preloader = () => {
+    const elem = document.createElement('div');
+    elem.className = 'animation';
+    charLnk.appendChild(elem);
+}
+
+planetsLnk.addEventListener('change', async (ev) => {
     i = ev.target.value;
-    //console.log(i);
-    init(i);
+    if (i==='') {
+        charLnk.innerHTML='Выберите нужную планету из выпадающего списка слева...';
+        return;
+    }
+    preloader();
+    await init(i);
     console.log(i, opis);
     charLnk.innerHTML = opis;
 })
