@@ -38,14 +38,15 @@ const preloader = () => {
 }
 
 planetsLnk.addEventListener('change', async (ev) => {
+    animLnk.innerHTML = '';
     i = ev.target.value;
     if (i==='') {
-        charLnk.innerHTML='Выберите нужную планету из выпадающего списка слева...';
+        animLnk.innerHTML= `Выберите нужную планету из выпадающего списка слева...<br><br><br><img src="./images/planets.png">`;
         return;
     }
     preloader();
     await init(i);
-    charLnk.innerHTML = opis;
-    return;
+    animLnk.innerHTML = opis;
+    
 })
 
